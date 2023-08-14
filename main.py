@@ -24,10 +24,9 @@ def switch_look():
 
 def clear_info():
     """Clear all User Info If Present."""
-
-    name_content = name_box.get()
-    email_content = email_box.get()
-    phone_content = phone_box.get()
+    name_content=name_box.get()
+    email_content=email_box.get()
+    phone_content=phone_box.get()
 
     if name_content:
         name_box.delete(0, ctk.END)
@@ -35,9 +34,25 @@ def clear_info():
         email_box.delete(0, ctk.END)
     if phone_content:
         phone_box.delete(0, ctk.END)
+    submit_user_info['state'] = 'normal'
 
     if not name_content and not email_content and not phone_content:
         mb.showerror("Error", "No Entry Made")
+
+def submit_user_data():
+    """Submits User Data and Disables Submit Data."""
+    name = name_box.get()
+    if not name:
+        mb.showerror("First Name Required", "Please Enter Your First Name.")
+    email = email_box.get()
+    if not email:
+        email = "No email"
+    phone = phone_box.get()
+    if not phone:
+        phone = "No Phone"
+    if name:
+        print(name, email, phone)
+        submit_user_info['state'] = 'disabled'
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("green")
@@ -108,7 +123,8 @@ clear_user_info.pack(side='bottom', fill = 'x', padx=25, pady=5)
 submit_user_info = ctk.CTkButton(title_frame,
                                  text='Submit Info',
                                  height=50,
-                                 corner_radius=6)
+                                 corner_radius=6,
+                                 command=submit_user_data)
 submit_user_info.pack(side='bottom', fill = 'x', padx=25, pady=5)
 
 # main process frame
