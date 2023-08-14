@@ -3,8 +3,43 @@ import customtkinter as ctk
 from tkinter import messagebox as mb
 from PIL import ImageTk, Image
 
+###################### Functions #############################
+def switch_look():
+
+    global button_on
+
+    if button_on:
+        ctk.set_appearance_mode("dark")
+        app_switch.configure(text='Dark Mode')
+        title.configure(text_color="#118c4f")
+        button_on=False
+    else:
+        ctk.set_appearance_mode("light")
+        app_switch.configure(text='Light Mode')
+        title.configure(text_color="#5A5A5A")
+        button_on=True
+
+
+def clear_info():
+    name_content = name_box.get()
+    email_content = email_box.get()
+    phone_content = phone_box.get()
+
+    if name_content:
+        name_box.delete(0, ctk.END)
+    if email_content:
+        email_box.delete(0, ctk.END)
+    if phone_content:
+        phone_box.delete(0, ctk.END)
+
+    if not name_content and not email_content and not phone_content:
+        mb.showerror("Error", "No Entry Made")
+
+
+
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("green")
+
 
 # main window
 app = ctk.CTk()
@@ -20,10 +55,14 @@ bg.place(x=0, y=0, relwidth=1, relheight=1)
 title_frame = ctk.CTkFrame(app, width=220)
 title_frame.pack(side='left', fill='y')
 
+app_switch = ctk.CTkSwitch(title_frame, text="Light Mode", command=switch_look)
+app_switch.pack(pady=10)
+button_on = True
+
 title = ctk.CTkLabel(title_frame, text='Debt Management Calculator',
                      font=ctk.CTkFont(size=30), wraplength=220)
 
-title.pack(side='top', padx=10, pady=(50, 10))
+title.pack(side='top', padx=10, pady=(20, 10))
 
 name_box = ctk.CTkEntry(title_frame,
                         width=200,
@@ -43,12 +82,13 @@ phone_box.pack(padx=20, pady=(10, 5))
 exit_button = ctk.CTkButton(title_frame,
                                  text='Exit App',
                                  height=50,
-                                 corner_radius=6)
+                                 corner_radius=6, command=exit)
 exit_button.pack(side='bottom', fill = 'x', padx=50, pady=(5, 20))
 clear_user_info = ctk.CTkButton(title_frame,
                                  text='Clear/Reset Info',
                                  height=50,
-                                 corner_radius=6)
+                                 corner_radius=6,
+                                 command=clear_info)
 clear_user_info.pack(side='bottom', fill = 'x', padx=50, pady=5)
 submit_user_info = ctk.CTkButton(title_frame,
                                  text='Submit Info',
