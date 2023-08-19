@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoff your Debt With This Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Debt Management Calculator</h1>
+        <h2>Debt Information</h2>
+        <label for="debtName">Enter your Debt Information</label>
+        <input type="text" name="debtName" id="debtName" value="Debt Name">
+        <label for="debtType">Debt Type</label>
+        <select name="debtType" id="debtType">
+            <option value="auto">Auto</option>
+            <option value="car">Car</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="personal">Personal Loan</option>
+            <option value="student">Student Loan</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="balance">Current Balance Due</label>
+        <input type="number" name="balance" id="balance" value="Current Balance Due">
+        <label for="rate">Enter Interest Rate</label>
+        <input type="number" name="rate" id="rate" value="Enter Interest Rate">
+        <label for="monthlyPayment">Enter your Monthly Contribution</label>
+        <input type="number" name="monthlyPayment" id="monthlyPayment" value="Enter your Monthly Contribution">
+        <button type="submit" id="debtSubmit">Submit Debt</button>
+        <button type="reset" id="resetFields">Clear All Fields</button>
+    </div>
+</body>
+</html>
