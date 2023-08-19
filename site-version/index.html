@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoff your Debt With This Calculator</title>
+    <title>DMC - Manage Debt</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
@@ -12,9 +12,11 @@
 <body>
     <div class="container">
         <h1>Debt Management Calculator</h1>
-        <h2>Debt Information</h2>
+        <h2>
+            <center>Debt Management Calculator</center>
+        </h2>
         <label for="debtName">Enter your Debt Information</label>
-        <input type="text" name="debtName" id="debtName" value="Debt Name">
+        <input type="text" name="debtName" id="debtName" placeholder="Debt Name">
         <label for="debtType">Debt Type</label>
         <select name="debtType" id="debtType">
             <option value="auto">Auto</option>
@@ -25,11 +27,11 @@
             <option value="other">Other</option>
         </select>
         <label for="balance">Current Balance Due</label>
-        <input type="number" name="balance" id="balance" value="1000">
+        <input type="number" name="balance" id="balance" placeholder="1000 or 500.50">
         <label for="rate">Enter Interest Rate</label>
-        <input type="number" name="rate" id="rate" value="15">
+        <input type="number" name="rate" id="rate" placeholder="15 or 18.5">
         <label for="monthlyPayment">Enter your Monthly Contribution</label>
-        <input type="number" name="monthlyPayment" id="monthlyPayment" value="100">
+        <input type="number" name="monthlyPayment" id="monthlyPayment" placeholder="Minimum of 10 dollars">
         <div class="buttons">
             <button type="submit" id="debtSubmit">Submit Debt</button>
             <button type="reset" id="resetFields">Clear All Fields</button>
