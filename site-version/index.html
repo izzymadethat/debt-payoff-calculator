@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <h1>Debt Management Calculator</h1>
@@ -23,13 +25,19 @@
             <option value="other">Other</option>
         </select>
         <label for="balance">Current Balance Due</label>
-        <input type="number" name="balance" id="balance" value="Current Balance Due">
+        <input type="number" name="balance" id="balance" value="1000">
         <label for="rate">Enter Interest Rate</label>
-        <input type="number" name="rate" id="rate" value="Enter Interest Rate">
+        <input type="number" name="rate" id="rate" value="15">
         <label for="monthlyPayment">Enter your Monthly Contribution</label>
-        <input type="number" name="monthlyPayment" id="monthlyPayment" value="Enter your Monthly Contribution">
-        <button type="submit" id="debtSubmit">Submit Debt</button>
-        <button type="reset" id="resetFields">Clear All Fields</button>
+        <input type="number" name="monthlyPayment" id="monthlyPayment" value="100">
+        <div class="buttons">
+            <button type="submit" id="debtSubmit">Submit Debt</button>
+            <button type="reset" id="resetFields">Clear All Fields</button>
+        </div>
+        <h2>Results:</h2>
+        <div id="result"></div>
     </div>
+
 </body>
+
 </html>
