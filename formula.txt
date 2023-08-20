@@ -1,0 +1,13 @@
+balance = "Whatever user inputs as starting balance"
+rate = " interest rate x .01"
+contribution = "amount user is willing to contribute"
+
+
+Every month, the contribution is subtracted from the outstanding balance if not
+$0. The new total is the balance - contribution but the new amount has added
+interest.
+
+I think I write it as:
+    new_balance = balance - contribution
+
+balance += balance * rate ?

@@ -174,6 +174,7 @@ clear_debt = ctk.CTkButton(app_frame, text='Clear', height=50)
 submit_debt.pack(side='left', padx=(100, 5), pady=(0, 20))
 clear_debt.pack(side='right', padx=(5, 100),pady=(0, 20))
 
+# Tree View Display
 tree_frame = ctk.CTkFrame(app, height=500)
 tree_frame.pack(fill='both', padx=10, pady=10)
 tree_scroll = ttk.Scrollbar(tree_frame)
