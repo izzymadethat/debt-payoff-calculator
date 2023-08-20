@@ -29,7 +29,7 @@ while (balanceNum > 0) {
 }
 '''
 
-If you would like to mess around with my python funtion, I have included the source code.
+If you would like to mess around with my python function, I have included the source code.
 Just be sure to create a new branch
 
 Future Features:
@@ -46,5 +46,5 @@ I started learning coding so that I could advance in a career that pays me for s
 As well as help find solutions to making the world a better and more efficient place!
 
 [My LinkedIn Profile](https://linkedin.com/in/isaiah-vickers) |
-[My Github](https://linkedin.com/in/isaiah-vickers) |
+[My Github](https://github.com/izzymadethat) |
 [My Email](mailto:isaiah.vickers@outlook.com)
