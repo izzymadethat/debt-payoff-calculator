@@ -21,13 +21,13 @@ It not only lets you know how many months it will take to payoff, but shows your
 
 Here's how the formula is written:
 
-'''js
+```js
 while (balanceNum > 0) {
         balanceNum -= contributionNum; // Balance - Monthly Contribution
         const accruedInterest = balanceNum + ((rateNum / 12) * balanceNum); // Interest amount is added to whatever is NOT paid off
         months++; //This happens each month until the balance becomes 0
 }
-'''
+```
 
 If you would like to mess around with my python function, I have included the source code.
 Just be sure to create a new branch
